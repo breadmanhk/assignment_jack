@@ -1,0 +1,184 @@
+/*
+SEHS4517 Web Application Development and Management
+Individual Assignment
+Submission date: 18 October 2025
+Student Name: [Your Full Name]
+Student ID: [Your Student ID]
+
+File: check-result.css
+Description: Styles specific to the validation result page (check.php)
+*/
+
+/* ========================================
+   BODY LAYOUT ADJUSTMENTS
+   ======================================== */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ========================================
+   CONTAINER OVERRIDE
+   ======================================== */
+.container {
+    max-width: 700px;
+    width: 100%;
+    animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================================
+   SUCCESS VARIANT STYLES
+   ======================================== */
+body.success {
+    background: linear-gradient(135deg, #52c234 0%, #28a745 100%);
+}
+
+.success .header {
+    background: linear-gradient(135deg, #52c234 0%, #28a745 100%);
+}
+
+.success .message-box {
+    background: #d4edda;
+    border: 2px solid #28a745;
+}
+
+.success .message-box strong {
+    color: #28a745;
+    font-size: 1.2em;
+}
+
+/* ========================================
+   ERROR VARIANT STYLES
+   ======================================== */
+body.error {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.error .header {
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+}
+
+.error .message-box {
+    background: #f8d7da;
+    border: 2px solid #e74c3c;
+}
+
+.error .message-box strong {
+    color: #e74c3c;
+    font-size: 1.2em;
+}
+
+/* ========================================
+   HEADER WITH ICON
+   ======================================== */
+.header {
+    padding: 50px 40px;
+}
+
+.icon-large {
+    font-size: 5em;
+    margin-bottom: 20px;
+    animation: scaleIn 0.5s ease-out;
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.header h1 {
+    font-size: 2.2em;
+}
+
+/* ========================================
+   MESSAGE BOX
+   ======================================== */
+.message-box {
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.message-box p {
+    font-size: 1.15em;
+    color: #333;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+/* ========================================
+   DETAILS SUMMARY
+   ======================================== */
+.details-summary {
+    background: linear-gradient(to right, #f8f9fa, #e9ecef);
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.details-summary h3 {
+    color: #1e3c72;
+    margin-bottom: 20px;
+    font-size: 1.4em;
+    border-bottom: 2px solid #667eea;
+    padding-bottom: 10px;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.summary-item:last-child {
+    border-bottom: none;
+}
+
+.summary-label {
+    font-weight: 600;
+    color: #555;
+}
+
+.summary-value {
+    color: #333;
+    font-weight: 500;
+}
+
+/* ========================================
+   BUTTON ADJUSTMENTS
+   ======================================== */
+.button-group {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+@media (max-width: 768px) {
+    .icon-large {
+        font-size: 3.5em;
+    }
+
+    .header h1 {
+        font-size: 1.6em;
+    }
+}

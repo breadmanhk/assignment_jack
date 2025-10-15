@@ -1,0 +1,246 @@
+/*
+SEHS4517 Web Application Development and Management
+Individual Assignment
+Submission date: 18 October 2025
+Student Name: [Your Full Name]
+Student ID: [Your Student ID]
+
+File: base.css
+Description: Shared base styles for all pages
+*/
+
+/* ========================================
+   RESET & BASE STYLES
+   ======================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* ========================================
+   CONTAINER & LAYOUT
+   ======================================== */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+/* ========================================
+   HEADER STYLES
+   ======================================== */
+.header {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    padding: 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    animation: pulse 8s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1;
+}
+
+.header p {
+    font-size: 1.1em;
+    opacity: 0.9;
+    position: relative;
+    z-index: 1;
+}
+
+/* ========================================
+   CONTENT SECTIONS
+   ======================================== */
+.content {
+    padding: 40px;
+}
+
+/* ========================================
+   BUTTON STYLES
+   ======================================== */
+button, .button {
+    padding: 15px 50px;
+    font-size: 1.1em;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    display: inline-block;
+}
+
+button:active, .button:active {
+    transform: translateY(0);
+}
+
+.button-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 35px;
+    justify-content: center;
+}
+
+/* Button Variants */
+button[type="submit"], .btn-reserve {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+button[type="submit"]:hover, .btn-reserve:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+button[type="reset"], .btn-clear {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+}
+
+button[type="reset"]:hover, .btn-clear:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(245, 87, 108, 0.4);
+}
+
+.btn-confirm {
+    background: linear-gradient(135deg, #52c234 0%, #28a745 100%);
+    color: white;
+}
+
+.btn-confirm:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+}
+
+.btn-back {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.btn-back:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+/* ========================================
+   FOOTER STYLES
+   ======================================== */
+.footer {
+    background: #1e3c72;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+}
+
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+.highlight {
+    color: #667eea;
+    font-weight: 700;
+}
+
+.required {
+    color: #e74c3c;
+    margin-left: 3px;
+}
+
+.icon {
+    margin-right: 8px;
+}
+
+/* ========================================
+   INFO & ALERT BOXES
+   ======================================== */
+.info-box {
+    background: #e8f4f8;
+    border-left: 4px solid #3498db;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    color: #2c3e50;
+}
+
+.alert-info {
+    background: #e8f4f8;
+    border-left: 5px solid #3498db;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    font-size: 1.05em;
+    color: #2c3e50;
+}
+
+.alert-info strong {
+    color: #2980b9;
+}
+
+.info-note {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-size: 0.95em;
+    color: #856404;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 1.8em;
+    }
+
+    .content {
+        padding: 25px;
+    }
+
+    button, .button {
+        padding: 12px 35px;
+        font-size: 1em;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <!--
+    SEHS4517 Web Application Development and Management
+    Individual Assignment
+    Submission date: 18 October 2025
+    Student Name: [Your Full Name]
+    Student ID: [Your Student ID]
+    -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grand Horizon Hotel - Room Reservation</title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/reserve-form.css" />
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Grand Horizon Hotel</h1>
+            <p>Your Luxury Destination in the Heart of the City</p>
+        </header>
+
+        <section class="intro-section">
+            <h2>Welcome to Grand Horizon Hotel</h2>
+            <p>
+                Nestled in the vibrant heart of Hong Kong, Grand Horizon Hotel stands as a beacon of luxury and comfort.
+                Our five-star establishment offers an unparalleled hospitality experience, blending modern elegance with
+                traditional Asian warmth. With over 300 exquisitely designed rooms and suites, each space is crafted to
+                provide guests with a sanctuary of relaxation and sophistication.
+            </p>
+            <p>
+                Our world-class amenities include an infinity rooftop pool with stunning harbor views, a state-of-the-art
+                fitness center, an award-winning spa, and five distinctive dining venues featuring international and local
+                cuisine. Whether you're visiting for business or leisure, our dedicated concierge team is committed to making
+                your stay memorable. Located just minutes from major shopping districts, cultural landmarks, and business centers,
+                Grand Horizon Hotel is the perfect choice for discerning travelers.
+            </p>
+            <p>
+                We pride ourselves on our commitment to excellence, having received numerous accolades including the prestigious
+                AAA Five Diamond Award and recognition from leading travel publications. Our professional staff, with an average
+                of ten years of hospitality experience, ensures that every guest receives personalized attention. Book your stay
+                with us today and discover why Grand Horizon Hotel is consistently rated as one of Hong Kong's premier luxury
+                accommodations. Experience the perfect blend of comfort, style, and exceptional service that defines true hospitality.
+            </p>
+        </section>
+
+        <section class="form-section">
+            <h2>Room Reservation Form</h2>
+            <form action="reserve.php" method="post">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstname">First Name <span class="required">*</span></label>
+                        <input type="text" id="firstname" name="firstname" required="required" />
+                    </div>
+                    <div class="form-group">
+                        <label for="lastname">Last Name <span class="required">*</span></label>
+                        <input type="text" id="lastname" name="lastname" required="required" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Gender <span class="required">*</span></label>
+                    <div class="radio-group">
+                        <div class="radio-option">
+                            <input type="radio" id="male" name="gender" value="Male" required="required" />
+                            <label for="male">Male</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="female" name="gender" value="Female" required="required" />
+                            <label for="female">Female</label>
+                        </div>
+                        <div class="radio-option">
+                            <input type="radio" id="other" name="gender" value="Other" required="required" />
+                            <label for="other">Other</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="date">Date of Reservation <span class="required">*</span></label>
+                        <input type="date" id="date" name="date" required="required" />
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Time of Reservation <span class="required">*</span></label>
+                        <input type="time" id="time" name="time" required="required" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="item">Room Type <span class="required">*</span></label>
+                    <select id="item" name="item" required="required">
+                        <option value="">-- Select Room Type --</option>
+                        <option value="Deluxe Room">Deluxe Room</option>
+                        <option value="Executive Suite">Executive Suite</option>
+                        <option value="Harbor View Suite">Harbor View Suite</option>
+                        <option value="Presidential Suite">Presidential Suite</option>
+                        <option value="Family Suite">Family Suite</option>
+                        <option value="Penthouse Suite">Penthouse Suite</option>
+                    </select>
+                    <div class="info-box">
+                        Reservations must be made between 1 to 3 days in advance
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Mailing Address <span class="required">*</span></label>
+                    <textarea id="address" name="address" rows="3" required="required"></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">Contact Phone Number <span class="required">*</span></label>
+                        <input type="tel" id="phone" name="phone" required="required" />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required="required" />
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="username">Member Username <span class="required">*</span></label>
+                        <input type="text" id="username" name="username" required="required" />
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Member Password <span class="required">*</span></label>
+                        <input type="password" id="password" name="password" required="required" />
+                    </div>
+                </div>
+
+                <div class="button-group">
+                    <button type="submit">Reserve</button>
+                    <button type="reset">Clear</button>
+                </div>
+            </form>
+        </section>
+
+        <footer class="footer">
+            <p>&copy; 2025 Grand Horizon Hotel. All Rights Reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

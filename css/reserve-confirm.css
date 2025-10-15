@@ -1,0 +1,99 @@
+/*
+SEHS4517 Web Application Development and Management
+Individual Assignment
+Submission date: 18 October 2025
+Student Name: [Your Full Name]
+Student ID: [Your Student ID]
+
+File: reserve-confirm.css
+Description: Styles specific to the confirmation page (reserve.php)
+*/
+
+/* ========================================
+   CONTAINER OVERRIDE
+   ======================================== */
+.container {
+    max-width: 800px;
+}
+
+/* ========================================
+   HEADER ADJUSTMENTS
+   ======================================== */
+.header h1 {
+    font-size: 2.2em;
+}
+
+/* ========================================
+   DETAILS CARD
+   ======================================== */
+.details-card {
+    background: linear-gradient(to right, #f8f9fa, #e9ecef);
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.details-card h2 {
+    color: #1e3c72;
+    margin-bottom: 25px;
+    font-size: 1.6em;
+    border-bottom: 3px solid #667eea;
+    padding-bottom: 10px;
+}
+
+/* ========================================
+   DETAIL ROWS
+   ======================================== */
+.detail-row {
+    display: flex;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.detail-row:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 10px rgba(102, 126, 234, 0.2);
+}
+
+.detail-label {
+    font-weight: 600;
+    color: #555;
+    width: 200px;
+    flex-shrink: 0;
+}
+
+.detail-value {
+    color: #333;
+    font-weight: 500;
+    flex: 1;
+}
+
+.detail-value.highlight {
+    font-size: 1.1em;
+}
+
+/* ========================================
+   FORM INLINE STYLING
+   ======================================== */
+form {
+    display: inline;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+@media (max-width: 768px) {
+    .detail-row {
+        flex-direction: column;
+    }
+
+    .detail-label {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}
